@@ -1,1 +1,104 @@
-<h1>Hello World Wide Web!</h1>
+<!DOCTYPE html>
+<html lang="en-ca">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Guinea Pidea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+          /* ===== base ===== */
+
+      html {
+        font-size: 16px;
+        background-color: #E6EECF;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #FFFDF4;
+        color: #44601F;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      p,
+      li {
+        font-size: 1em;
+        line-height: 1.65;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+       /* ===== hero ===== */
+
+      .hero {
+        background-color: #FFFDF4;
+        background-image: url("images/shared/hero-grid.png");
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 72px;
+      }
+
+      /* ===== nav ===== */
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 36px;
+        margin-bottom: 72px;
+        background-color: #E6EECF;
+        border: 2px solid #44601F;
+        border-top: none;
+        border-radius: 0 0 28px 28px;
+      }
+
+      .logo {
+        font-family: 'Schoolbell', cursive;
+        font-size: 2em;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        font-size: 1.125em;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .nav-links a.current {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="container">
+
+        <nav class="nav">
+          <a class="logo" href="index.html">Guinea Pidea</a>
+          <ul class="nav-links">
+            <li><a class="current" href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="breeds.html">Breeds</a></li>
+            <li><a href="care.html">Care</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </section>
+  </body>
+</html>
