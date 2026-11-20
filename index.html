@@ -36,12 +36,14 @@
       }
        /* ===== hero ===== */
 
-      .hero {
+       .hero {
+        height: 700px;
+        box-sizing: border-box;
         background-color: #FFFDF4;
-        background-image: url("images/shared/hero-grid.png");
+        background-image: url("hero-grid.png");
         background-size: cover;
         background-position: center;
-        padding-bottom: 72px;
+        background-repeat: no-repeat;
       }
 
       /* ===== nav ===== */
@@ -80,6 +82,25 @@
 
       .nav-links a.current {
         text-decoration: underline;
+      }
+            /* ===== links ===== */
+
+      a:link {
+        color: #44601F;
+      }
+
+      a:visited {
+        color: #44601F;
+      }
+
+      a:hover {
+        color: #44601F;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: #FFFDF4;
+        background-color: #44601F;
       }
     </style>
   </head>
