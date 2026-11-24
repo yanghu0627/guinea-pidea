@@ -35,6 +35,35 @@
         margin: 0 auto;
       }
 
+      /* ===== links ===== */
+
+      a:link {
+        color: #44601F;
+      }
+
+      a:visited {
+        color: #44601F;
+      }
+
+      /* AI-assisted (Claude):
+         Prompt: "How do I make the hover highlight a capsule shape
+         without the link text jumping?"
+         Used for: border-radius: 999px (capsule shape) and the
+         padding + negative margin that stops the text from moving. */
+      a:hover {
+        color: #44601F;
+        text-decoration: none;
+        background-color: #F5DD6B;
+        border-radius: 999px;
+        padding: 2px 10px;
+        margin: -2px -10px;
+      }
+
+      a:active {
+        color: #44601F;
+        opacity: 0.6;
+      }
+
       /* ===== hero ===== */
 
       .hero {
@@ -65,6 +94,12 @@
         font-family: 'Schoolbell', cursive;
         font-size: 2em;
         text-decoration: none;
+      }
+
+      .logo:hover {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
       }
 
       .nav-links {
@@ -107,6 +142,14 @@
         margin: 0;
       }
 
+      h1 {
+        font-family: 'Schoolbell', cursive;
+        font-weight: 400;
+        font-size: 7em;
+        line-height: 0.95;
+        margin: 14px 0;
+      }
+
       .intro {
         max-width: 380px;
         margin: 0;
@@ -117,14 +160,6 @@
         align-items: center;
         gap: 14px;
         margin-top: 22px;
-      }
-
-      h1 {
-        font-family: 'Schoolbell', cursive;
-        font-weight: 400;
-        font-size: 7em;
-        line-height: 0.95;
-        margin: 14px 0;
       }
 
       /* ===== hero art ===== */
@@ -178,11 +213,11 @@
         padding: 2px 16px;
         border-radius: 999px;
         background-color: #FFFDF4;
+        box-shadow: 0 6px 18px rgba(68, 96, 31, 0.15);
         font-family: 'Schoolbell', cursive;
         font-size: 1.875em;
-        transform: rotate(8deg);
         white-space: nowrap;
-        box-shadow: 0 6px 18px rgba(68, 96, 31, 0.15);
+        transform: rotate(8deg);
       }
 
       /* ===== trio ===== */
@@ -211,7 +246,6 @@
       }
 
       h3 {
-        display: inline-block;
         font-family: 'Schoolbell', cursive;
         font-weight: 400;
         font-size: 2em;
@@ -222,6 +256,17 @@
       .circle-item p {
         max-width: 260px;
         margin: 0 auto;
+      }
+
+      .circle-item:hover {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+      }
+
+      .circle-item:hover img {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(68, 96, 31, 0.18);
       }
 
       /* ===== did you know ===== */
@@ -288,11 +333,66 @@
       }
 
       .footer-row {
+        position: relative;
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         align-items: center;
         padding: 40px 0;
-        position: relative;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-links a {
+        font-size: 1.125em;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        text-decoration: underline;
+      }
+
+      .credit {
+        margin: 0;
+        text-align: right;
+      }
+
+      .credit a {
+        font-style: italic;
+        text-decoration: none;
+      }
+
+      .arrow {
+        display: inline-block;
+      }
+
+      /* AI-assisted (Claude):
+         Prompt: "How do I make the email link's arrow move forward on hover,
+         with the underline running under the arrow too?"
+         Used for: wrapping the arrow in a span with display: inline-block
+         so transform works, using border-bottom instead of text-decoration
+         so the line stays still under the moving arrow, and resetting
+         border-radius so the line doesn't curve. */
+      .credit a:hover {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        text-decoration: none;
+        border-bottom: 1px solid #44601F;
+      }
+
+      .credit a:hover .arrow {
+        transform: translateX(4px);
       }
 
       .footer-pig {
@@ -359,109 +459,6 @@
         left: 706px;
         top: -28px;
         opacity: 0.08;
-      }
-
-      .footer-links {
-        display: flex;
-        gap: 24px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .footer-links a {
-        font-size: 1.125em;
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .credit {
-        margin: 0;
-        text-align: right;
-      }
-
-      .credit a {
-        font-style: italic;
-        text-decoration: none;
-      }
-
-      .arrow {
-        display: inline-block;
-      }
-
-      .credit a:hover {
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        border-bottom: 1px solid #44601F;
-      }
-
-      .credit a:hover .arrow {
-        transform: translateX(4px);
-      }
-
-      /* ===== links ===== */
-
-      a:link {
-        color: #44601F;
-      }
-
-      a:visited {
-        color: #44601F;
-      }
-
-      /* AI-assisted (Claude):
-         Prompt: "How do I make the hover highlight a capsule shape
-         without the link text jumping?"
-         Used for: border-radius: (capsule shape) and the
-         padding + negative margin that stops the text from moving. */
-      a:hover {
-        color: #44601F;
-        text-decoration: none;
-        background-color: #F5DD6B;
-        border-radius: 999px;
-        padding: 2px 10px;
-        margin: -2px -10px;
-      }
-
-      a:active {
-        color: #44601F;
-        opacity: 0.6;
-      }
-
-      .circle-item:hover {
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-      }
-
-      .circle-item:hover img {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 24px rgba(68, 96, 31, 0.18);
-      }
-
-      .logo:hover {
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-      }
-
-      .footer-links a:hover,
-      /* AI-assisted (Claude):
-         Prompt: "How do I make the email link's arrow move forward on hover,
-         with the underline running under the arrow too?"
-         Used for: wrapping the arrow in a span with display: inline-block
-         so transform works, using border-bottom instead of text-decoration
-         so the line stays still under the moving arrow, and resetting
-         border-radius so the line doesn't curve. */
-      .credit a:hover {
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-        border-radius: 0;
-        text-decoration: none;
-        border-bottom: 1px solid #44601F;
       }
     </style>
   </head>
@@ -547,7 +544,7 @@
           </div>
 
           <div class="note">
-            <p class="kicker">Fun Fact</p>
+            <p class="kicker">Fun fact</p>
             <p class="note-text">A group of guinea pigs is called a herd.</p>
           </div>
 
